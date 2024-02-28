@@ -25,8 +25,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function blockdev_blockdev_block_init() {
-	register_block_type( __DIR__ . '/build' );
-}
+	$blocks = array(
+		'first-block',
+		'second-block'
+	);
+
+	foreach($blocks as $block){
+		register_block_type( __DIR__ . "/build/{$block}" );
+	}
+};
 
 add_action( 'init', 'blockdev_blockdev_block_init' );
 

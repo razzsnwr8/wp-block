@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/second-block",
+  "version": "0.1.0",
+  "title": "Second Block",
+  "category": "text",
+  "icon": "text",
+  "description": "Second Project.",
+  "example": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "color": {
+      "type": "string",
+      "default": "#000000"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "blockdev",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}

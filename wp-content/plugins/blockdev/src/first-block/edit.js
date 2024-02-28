@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 /**
  * Retrieves the translation of text.
  *
@@ -16,6 +16,7 @@ import { __ } from '@wordpress/i18n';
 /** WordPress components that create the necessary UI elements for the block 
  * @see https://developer.wordpress.org/block-editor/packages/packages-components/
  ***/
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import { PanelBody, TextControl, ToggleControl } from "@wordpress/components";
 
 /**
@@ -24,7 +25,6 @@ import { PanelBody, TextControl, ToggleControl } from "@wordpress/components";
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
